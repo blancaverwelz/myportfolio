@@ -13,7 +13,7 @@ html, body {
 }
 .background {
     height: 100%;
-    background: url(./img/dreamstime.jpg);
+    
     background-size: cover;
     width: 100%;
     padding: 0;
@@ -43,6 +43,7 @@ html, body {
 .page-name {
     font-family: 'Pontano Sans', sans-serif;
     font-size: 3rem;
+    background: url(./img/dreamstime.jpg);
     color: rgba(255, 245, 238, 0.990);
     letter-spacing: 8px;
     padding: .7rem 0;
