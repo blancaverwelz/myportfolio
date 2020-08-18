@@ -12,7 +12,8 @@ html, body {
 }
 .background {
     height: 100%;
-    background-image: url(/img/dreamstime.jpg);
+    background-image: url(./img/cod.jpg);
+    background-size: cover;
     width: 100%;
     padding: 0;
     margin: 0;
