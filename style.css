@@ -1,0 +1,985 @@
+*  {
+    box-sizing: border-box;
+    color: seashell;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background-image: url(./img/dreamstime.JPG);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+}
+.portfolio-home {
+    min-height: 97.5%;
+}
+
+/* INDEX */
+.container {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(-50%, -50%)
+}
+.kamusta {
+    font-family: 'Pontano Sans', sans-serif;
+    letter-spacing: 4px;
+    color: rgba(255, 0, 0, 0.750);
+    border-bottom: 1px solid rgba(255, 0, 0, 0.750);
+    padding: 10px;
+}
+.page-name {
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: 3rem;
+    color: rgba(255, 245, 238, 0.990);
+    letter-spacing: 8px;
+    padding: .7rem 0;
+}
+.page-name span {
+    color: rgba(255, 0, 0, 0.600);
+}
+.portfolio a {
+    text-decoration: none;
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: rgba(255, 245, 238, 0.800);
+    border: 1px solid rgba(255, 245, 238, 0.800);
+    border-radius: 1px;
+    letter-spacing: 1px;
+    padding: 9px 15px;
+}
+.btn {
+    background-color: transparent;
+    border: 1px solid rgba(255, 245, 238, 0.800);
+    color: rgba(255, 245, 238, 0.800);
+    padding: 9px 15px;
+    border-radius: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.contact {
+    display: flex;
+    position: relative;
+    margin-top: 15px;
+}
+.contact span {
+    position: relative;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 1rem;
+    color: rgba(226, 226, 226, 0.800);
+}
+.contact .text {
+    display: none;
+    font-size: .5rem;
+    text-align: center;
+    border: 1px solid seashell;
+    padding: .3rem .5rem;
+    border-radius: 2px;
+}
+.gitHub:hover .text {
+    left: calc(11%);
+    
+}
+.about:hover .text {
+    left: calc(31.5%);
+}
+.email:hover .text {
+    left: calc(52.3%);
+}
+.mobile:hover .text {
+    left: calc(72.1%);
+}
+.resume:hover .text {
+    left: 90.5%;
+}
+.gitHub:hover .text, 
+.about:hover .text,
+.email:hover .text,
+.mobile:hover .text,
+.resume:hover .text {
+    display: inline-block;
+    position: absolute;
+    top: 80%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    animation: fade 1s;
+}
+
+/* PORTFOLIO */
+.portfolio-container {
+    display: grid;
+    gap: 20px;
+    margin: 60px 50px;
+    grid-template-areas: 
+    'home foodie foodie'
+    'mobile fourth fourth';
+}
+.home {
+    grid-area: home;
+    background-image: url(./img/home.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: auto;
+    border: 1px solid rgba(255, 245, 238, 0.541);
+    text-decoration: none;
+    transition: all .5s ease;
+}
+.foodie {
+    grid-area: foodie;
+    background-image: url(./img/foodie.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: all .5s ease;
+    text-decoration: none;
+}
+.port-mobile {
+    grid-area: mobile;
+    background-image: url(./img/mobile.jpg);
+    background-size: cover;
+    height: 500px;
+    transition: all .5s ease;
+    text-decoration: none;
+}
+.fourth {
+    display: grid;
+    gap: 20px;
+    grid-area: fourth;
+    height: 500px;
+    grid-template-areas: 
+    'yoga musashi'
+    'cod cod';
+}
+.yoga {
+    grid-area: yoga;
+    background-image: url(./img/yoga.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: all .5s ease;
+    text-decoration: none;
+}
+.musashi {
+    grid-area: musashi;
+    background-image: url(./img/musashi.jpg);
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    transition: all .5s ease;
+    text-decoration: none;
+}
+.cod {
+    grid-area: cod;
+    background-image: url(./img/cod.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: all .5s ease;
+    text-decoration: none;
+}
+
+/* PORTFOLIO - TEXT STYLES */
+.home p {
+    display: block;
+    margin: 1rem;
+    text-decoration: none;
+    font-size: .9rem;
+}
+.foodie p,
+.port-mobile p,
+.yoga p,
+.musashi-text p,
+.cod p {
+    padding: .5rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-size: .8rem;
+    color: rgba(255, 245, 238, 0.900);
+    background-color: rgba(0, 0, 0, 0.850);
+}
+.foodie-text,
+.port-text,
+.yoga-text,
+.musashi-text,
+.cod-text {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* PORTFOLIO - ANIMATIONS */
+.home:hover,
+.foodie:hover,
+.port-mobile:hover,
+.yoga:hover,
+.musashi:hover,
+.cod:hover {
+    transform: scale(0.9,0.9);
+}
+
+/* HEADER */
+.portfolio-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    min-height: 210px;
+}
+.header-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-kamusta {
+    font-family: 'Pontano Sans', sans-serif;
+    letter-spacing: 4px;
+    color: rgba(255, 0, 0, 0.750);
+    border-bottom: 1px solid rgba(255, 0, 0, 0.750);
+}
+.header-pagename {
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: 3rem;
+    
+    letter-spacing: 8px;
+    padding: .7rem 0;
+}
+.header-pagename a {
+    text-decoration: none;
+    margin-left: 1rem;
+    color: rgba(255, 245, 238, 0.990);
+}
+
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    width: 31px;
+    height: 21px;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+.toggle-button .bar {
+    width: 100%;
+    height: 3px;
+    background-color: seashell;
+    border-radius: 10px;
+}
+
+.navbar-links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.navbar-links li {
+    list-style: none;
+    border-radius: 2px;
+}
+.navbar-links li:hover {
+    background-color: rgba(255, 0, 0, 0.600);
+}
+.navbar-links a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    padding: 1rem;
+    color: rgba(255, 0, 0, 0.750);
+    font-weight: bolder;
+}
+.navbar-links a:hover {
+    color: rgba(255, 245, 238, 0.900);   
+}
+
+/* ABOUT ME */
+.portfolio-about {
+    min-height: 90%;
+}
+.myprofile-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+.about-container {
+    width: 930px;
+    max-width: 80%;
+    background-image: url(./img/about-bg.jpg);
+    background-size: cover;
+    border: 1px solid rgba(255, 245, 238, 0.400);
+}
+.about-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 45px;
+    background-color: rgba(14, 13, 13, 0.900);
+    
+}
+.about-container h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: seashell;
+    letter-spacing: 2.5px;
+    padding: 4px 6px;
+    border-radius: 2px;
+}
+.headshot {
+    background-image: url(./img/headshot.jpg);
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    border-radius: 100%;
+    padding: 50px;
+    border: 1px solid rgb(35,35,35);
+}
+.about-text {
+    display: flex;
+    background-color: rgba(36, 35, 35, 0.63);
+    padding: 25px 15px;
+    flex-direction: column;
+    align-items: center;
+}
+.about-text a {
+    color:rgba(255, 0, 0, 0.600);
+}
+.about-container p {
+    line-height: 1.7rem;
+    color: rgba(255, 245, 238, 0.950);
+    padding: 0;
+    margin: 0;
+    letter-spacing: 1px;
+    max-width: 90%;
+}
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    background-color: rgba(36, 35, 35, 0.63);
+    width: 100%;
+}
+.skills h2 {
+    font-size: 1.3rem;
+    color: rgba(255, 245, 238, 0.950);
+    margin: 0;
+    padding-bottom: 15px;
+}
+.skills ul {
+    margin: 5px 0;
+}
+.skills li {
+    color: rgba(255, 245, 238, 0.950);
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+}
+.closing-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    background-color: rgba(36, 35, 35, 0.63);
+    width: 100%;
+}
+.closing-about p {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* CONTACT */
+.porfolio-contact {
+    min-height: 75%;
+}
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact-container h2 {
+    font-family: 'Pontano Sans', sans-serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.email-contact form{
+    display: flex;
+    flex-direction: column;
+}
+.contact-input {
+    margin: 5px;
+    color: rgb(35,35,35);
+    padding: 10px;
+    letter-spacing: 1px;
+    
+}
+.contact-input:focus{
+    outline-color: rgba(243, 64, 64, 0.699);
+    background: seashell;
+}
+::placeholder {
+    letter-spacing: 1px;
+}
+.btn {
+    border: 0;
+    padding-left: 5px;
+}
+.contact-btn {
+    color: rgb(22, 22, 22);
+    padding: 3px 5px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.phone,
+.email {
+    display: flex;
+    align-items: center;
+}
+.phone span,
+.email span {
+    padding-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* RESUME */ 
+.portfolio-resume {
+    min-height: 100%;
+}
+.doc-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.3rem 0;
+}
+.resume-kamusta {
+    font-family: 'Pontano Sans', sans-serif;
+    letter-spacing: 4px;
+    color: rgba(255, 0, 0, 0.750);
+    border-bottom: 1px solid rgba(255, 0, 0, 0.750);
+    padding: 10px;
+}
+.resume-pagename {
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: 3rem;
+    color: rgba(255, 245, 238, 0.990);
+    letter-spacing: 8px;
+    padding: .7rem 0;
+    text-decoration: none;
+}
+.resume-pagename a {
+    text-decoration: none;
+}
+
+.back-home {
+    padding: 1rem 2rem;
+}
+.back-home a {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.doc-container {
+    margin-bottom: 60px;
+}
+iframe/*pdf*/ {
+    width: 100vh;
+    height: 100vh;
+    align-items: center;
+}
+
+
+/* FOOTER */
+footer {
+    bottom: 0px;
+    width: 100%;
+    color: seashell;
+}
+.footer-bottom {
+    padding: 5px;
+    font-size: .7rem;
+}
+.copyright {
+    color: rgb(95,95,95);
+    opacity: .50;
+}
+
+@media screen and (max-width: 1280px) {
+   
+    /* PORTFOLIO */
+    .background {
+        min-height: 100%;
+    }
+    .portfolio-container {
+        height: auto;
+        margin-bottom: 180px;
+        grid-template-areas: 
+        'home foodie foodie'
+        'mobile mobile mobile' 
+        'fourth fourth fourth';
+    }
+    .home {
+        height: 250px;
+    }
+    .home p {
+        font-size: .8rem;
+    }
+    .port-mobile {
+        height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .fourth {
+        height: 600px;
+    }
+    .yoga {
+        height: 300px;
+    }
+    .cod {
+        height: 400px;
+    }
+    
+    /* HEADER */
+    
+    .header-pagename {
+        font-size: 2.5rem;
+    }
+    .navbar-links a {
+        font-size: .9rem;
+    }
+
+    /* ABOUT ME */
+    .about-container h2 {
+        font-size: 1.7rem;
+    }
+    .skills h2 {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    /* INDEX */ 
+    .container {
+        width: 100%;
+    }
+    .kamusta {
+        font-size: .9rem;
+    }
+    .page-name {
+        font-size: 2.5rem;
+    }
+    .btn {
+        font-size: .7rem;
+    }
+    .contact span {
+        font-size: 1rem;
+    }
+    .contact .text {
+        font-size: .4rem;
+    }
+
+     /* PORTFOLIO */
+    .home,
+    .foodie {
+        height: 200px;
+    }
+    .home p {
+        font-size: .7rem;
+    }
+    .port-mobile {
+        height: 350px;
+    }
+    .foodie p,
+    .port-mobile p,
+    .yoga p,
+    .musashi-text p,
+    .cod p {
+    font-size: .7rem;
+    }
+
+    /* HEADER */
+    .portfolio-header  {
+        flex-direction: column;
+    }
+    .toggle-button {
+        display: flex;
+    }
+    .navbar {
+        width: 100%;
+    }
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+    }
+    .navbar-links li {
+        text-align: center;
+    }
+    .navbar-links li a {
+        padding: .5rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+
+    /* ABOUT ME */
+    .myprofile-about {
+        padding-top: 0;
+    }
+}
+@media screen and (max-width: 890px) {
+    /* PORTFOLIO */
+    .portfolio-container {
+       display: flex;
+       flex-direction: column;
+       margin-bottom: 60px;
+    }
+    .home p {
+        font-size: .8rem;
+    }
+    .foodie,
+    .port-mobile {
+        height: 300px;
+    }
+    .fourth {
+        height: 400px;
+    }
+    .yoga, 
+    .musashi,
+    .cod {
+        height: 100%;
+    }
+
+    /* HEADER */
+    .header-pagename {
+        font-size: 2rem;
+    }
+
+    /* ABOUT ME */
+    .portfolio-about {
+        min-height: 87%;
+        margin: 0;
+    }
+    
+    .about-container h2 {
+        font-size: 1.3rem;
+    }
+    .headshot {
+        height: 150px;
+        width: 150px;
+    }
+    .about-container p {
+        font-size: .8rem;
+    }
+    .skills h2 {
+        font-size: .9rem;
+    }.skills li {
+        font-size: .8rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    /* RESUME */ 
+    .doc-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 25px;
+        height: 80vh;
+    }
+    .doc-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* PORTFOLIO */
+    .portfolio-container {
+        height: 100%;
+        margin-bottom: 460px;
+    }
+    .fourth {
+        display: flex;
+        flex-direction: column;
+    }
+    .foodie,
+    .port-mobile,
+    .yoga, 
+    .musashi {
+        height: 250px;
+    }
+    .cod {
+        height: 250px;
+        margin-bottom: 100px;
+    }
+    .foodie p,
+    .port-mobile p,
+    .yoga p,
+    .musashi-text p,
+    .cod p {
+    font-size: .6rem;
+    }
+
+    /* HEADER */
+    .header-pagename {
+        font-size: 1.8rem;
+    }
+    .toggle-button .bar {
+        height: 2px;
+    }
+
+    /* ABOUT ME */
+    
+    .about-container h2 {
+        font-size: 1rem;
+    }
+    .about-container p {
+        font-size: .7rem;
+    }
+    .skills h2 {
+        font-size: .8rem;
+    }
+    .skills li {
+        font-size: .7rem;
+    }
+
+    /* CONTACT */
+    .contact-container h2 {
+        font-size: 1rem;
+    }
+    .email-contact {
+        max-width: 80%;
+    }
+
+    .phone span,
+    .email span {
+        font-size: .8rem;
+    }
+    .phone .text,
+    .email .text {
+        font-size: .8rem;
+    }
+    .btn {
+        padding: 5px;
+    }
+    .contact-btn {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 668px) {
+    /* PORTFOLIO */
+    .portfolio-container {
+        margin-bottom: 330px;
+    }
+    .home {
+        height: 180px;
+    }
+    .foodie,
+    .port-mobile,
+    .yoga, 
+    .musashi,
+    .cod {
+        height: 200px;
+    }
+    .foodie p,
+    .port-mobile p,
+    .yoga p,
+    .musashi-text p,
+    .cod p {
+    font-size: .5rem;
+    }
+    
+}
+@media screen and (max-width: 568px) {
+    /* PORTFOLIO */
+    .portfolio-container {
+        margin-bottom: 280px;
+    }
+    .home {
+        height: 160px;
+    }
+    .home p {
+        font-size: .7rem;
+    }
+    .foodie,
+    .port-mobile,
+    .yoga, 
+    .musashi {
+        height: 180px;
+    }
+    .cod {
+        height: 180px;
+        margin-bottom: 0;
+    }
+
+    /* HEADER */
+    .header-pagename {
+        font-size: 1.5rem;
+    }
+
+    /* ABOUT ME */
+    
+    .about-container h2 {
+        font-size: .9rem;
+    }
+    .about-container p {
+        font-size: .6rem;
+    }
+    .skills h2 {
+        font-size: .7rem;
+    }
+    .skills li {
+        font-size: .6rem;
+    }
+    
+}
+@media screen and (max-width: 550px) {
+    /* INDEX */ 
+    .kamusta {
+        font-size: .7rem;
+        padding: 10px;
+    }
+    .page-name {
+        font-size: 1.3rem;
+    }
+    
+    .portfolio a {
+        font-size: .7rem;
+        padding: 6px 12px;
+    }
+    
+    .contact span {
+        font-size: .7rem;
+        margin: .5rem
+    }
+    .contact .text {
+        font-size: .3rem;
+    }
+    /* HEADER */
+    .navbar-links a {
+        font-size: .7rem;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    /* PORTFOLIO */
+    .home {
+        height: 110px;
+    }
+    .home p {
+        font-size: .5rem;
+    }
+    .fourth {
+        height: auto;
+    }
+    .foodie,
+    .port-mobile,
+    .yoga, 
+    .musashi {
+        height: 130px;
+    }
+    .cod {
+        height: 130px;
+        margin-bottom: 0;
+    }
+    .foodie p,
+    .port-mobile p,
+    .yoga p,
+    .musashi-text p,
+    .cod p {
+    font-size: .4rem;
+    }
+
+    /* HEADER */
+    .portfolio-header {
+        min-height: 200px;
+    }
+    .header-pagename {
+        font-size: 1rem;
+    }
+    .toggle-button {
+        margin-left: 1rem;
+    }
+
+    /* CONTACT */
+    .porfolio-contact {
+        min-height: 80%;
+    }
+
+    /* ABOUT ME */
+    .about-top {
+        padding: 10px;
+    }
+    .headshot {
+        height: 120px;
+        width: 120px;
+    }
+    /* CONTACT */
+    .contact-container h2 {
+        letter-spacing: 1px;
+        font-size: .7rem;
+    }
+    .phone span,
+    .email span {
+        font-size: .7rem;
+    }
+    .phone .text,
+    .email .text {
+        font-size: .7rem;
+    }
+}
+@media screen and (max-width: 375px) {
+    /* HEADER */
+    .header-pagename {
+        font-size: .9rem;
+    }
+}
+@media screen and (max-width: 320px) {
+    /* INDEX */ 
+    .kamusta {
+        font-size: .6rem;
+    }
+    .page-name {
+        font-size: 1rem;
+    }
+    
+    .portfolio a {
+        font-size: .6rem;
+        padding: 5px 10px;
+    }
+    
+    .contact span {
+        font-size: .6rem;
+        margin: .4rem
+    }
+    .contact .text {
+        font-size: .2rem;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
