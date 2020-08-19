@@ -7,14 +7,7 @@
 html, body {
     height: 100%;
     width: 100%;
-    padding: 0;
-    margin: 0;
-}
-.background {
-    height: 100%;
     background: url(./img/dreamstime.jpg);
-    background-size: cover;
-    width: 100%;
     padding: 0;
     margin: 0;
 }
@@ -252,7 +245,6 @@ html, body {
 .header-pagename {
     font-family: 'Pontano Sans', sans-serif;
     font-size: 3rem;
-    
     letter-spacing: 8px;
     padding: .7rem 0;
 }
@@ -300,6 +292,7 @@ html, body {
     padding: 1rem;
     color: rgba(255, 0, 0, 0.750);
     font-weight: bolder;
+    font-size: .9rem;
 }
 .navbar-links a:hover {
     color: rgba(255, 245, 238, 0.900);   
@@ -568,9 +561,6 @@ footer {
     .header-pagename {
         font-size: 2.5rem;
     }
-    .navbar-links a {
-        font-size: .9rem;
-    }
 
     /* ABOUT ME */
     .about-container h2 {
@@ -638,7 +628,8 @@ footer {
     .navbar-links li {
         text-align: center;
     }
-    .navbar-links li a {
+    .navbar-links a {
+        font-size: .8rem;
         padding: .5rem;
     }
     .navbar-links.active {
