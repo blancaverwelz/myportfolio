@@ -414,13 +414,13 @@ html, body {
 .email-contact form{
     display: flex;
     flex-direction: column;
+    padding-bottom: 50px;
 }
 .contact-input {
     margin: 5px;
     color: rgb(35,35,35);
     padding: 10px;
     letter-spacing: 1px;
-    
 }
 .contact-input:focus{
     outline-color: rgba(243, 64, 64, 0.699);
@@ -441,15 +441,21 @@ html, body {
     cursor: pointer;
     font-weight: bold;
 }
-.phone,
-.email {
+.phone-bottom,
+.email-bottom {
     display: flex;
     align-items: center;
 }
-.phone span,
-.email span {
+.phone-bottom span,
+.email-bottom span {
     padding-right: 10px;
-    font-size: 1.2rem;
+    margin: 0;
+}
+.phone-bottom p,
+.email-bottom p  {
+    margin: 2px 0;
+    font-size: .9rem;
+    color: rgba(255, 245, 238, 0.870);
 }
 
 /* RESUME */ 
