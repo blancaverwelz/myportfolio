@@ -654,12 +654,16 @@ footer {
        flex-direction: column;
        margin-bottom: 60px;
     }
+    .home {
+        margin-bottom: 15px;
+    }
     .home p {
         font-size: .8rem;
     }
     .foodie,
     .port-mobile {
         height: 300px;
+        margin-bottom: 15px;
     }
     .fourth {
         height: 400px;
@@ -668,8 +672,9 @@ footer {
     .musashi,
     .cod {
         height: 100%;
+        margin-bottom: 15px;
     }
-
+     
     /* HEADER */
     .header-pagename {
         font-size: 2rem;
@@ -730,7 +735,7 @@ footer {
     }
     .cod {
         height: 250px;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
     .foodie p,
     .port-mobile p,
@@ -884,6 +889,10 @@ footer {
 
 @media screen and (max-width: 414px) {
     /* PORTFOLIO */
+    .portfolio-container {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
     .home {
         height: 110px;
     }
