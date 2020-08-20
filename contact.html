@@ -41,11 +41,11 @@
             <h2>I would love to hear from you!</h2>
     
             <div class="email-contact">
-                <form action="mailto:blancavermanuel@outlook.com" method="post">
-                    <input type="email" name="email" class="contact-input" placeholder="Your email here" required>
-                    <textarea name="message" class="contact-input" cols="70" rows="20" placeholder="Your message.." required></textarea>
+                <form action="mailto:blancavermanuel@outlook.com" method="post" enctype="text/plain">
+                    <input type="email" name="email" class="contact-input" placeholder="Your email here" id="email" required>
+                    <textarea name="message" class="contact-input" cols="70" rows="20" placeholder="Your message.." id="message" required></textarea>
                     <div class="btn">
-                        <button type="submit" class="contact-btn">Submit</button>
+                        <button type="submit" class="contact-btn" value="send">Submit</button>
                     </div>
                 </form>
             </div>

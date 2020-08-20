@@ -382,6 +382,9 @@ html, body {
     line-height: 1.5rem;
     list-style: none;
 }
+.skills li a {
+    color:rgba(255, 0, 0, 0.600);
+}
 .closing-about {
     display: flex;
     flex-direction: column;
