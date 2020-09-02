@@ -281,17 +281,15 @@ html, body {
     list-style: none;
     border-radius: 2px;
 }
-.navbar-links li:hover {
-    background-color: rgba(255, 0, 0, 0.600);
-}
 .navbar-links a {
     display: block;
+    font-family: 'Hind', sans-serif;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1.8px;
     padding: 1rem;
-    color: rgba(255, 0, 0, 0.750);
-    font-weight: bolder;
+    color: rgba(221, 216, 213, 0.9); 
+    
     font-size: .9rem;
 }
 .navbar-links a:hover {
@@ -572,7 +570,8 @@ footer {
     .header-pagename {
         font-size: 2.5rem;
     }
-
+    
+    
     /* ABOUT ME */
     .about-container h2 {
         font-size: 1.7rem;
@@ -638,6 +637,9 @@ footer {
     }
     .navbar-links li {
         text-align: center;
+    }
+    .navbar-links li:hover {
+        background-color: rgba(255, 0, 0, 0.600);
     }
     .navbar-links a {
         font-size: .8rem;
